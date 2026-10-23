@@ -9,6 +9,13 @@ function parseTweets(runkeeper_tweets) {
 }
 
 function addEventHandlerForSearch() {
+	document.getElementById("textFilter").addEventListener("input", function() {
+		input = document.getElementById("textFilter").innerText;
+
+		document.getElementById("searchText").innerText = input;
+	});
+
+
 	//TODO: Search the written tweets as text is entered into the search box, and add them to the table
 }
 
