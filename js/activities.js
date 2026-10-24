@@ -60,7 +60,7 @@ function parseTweets(runkeeper_tweets) {
 		let distance = tweet.distance;
 		let day = tweet.time.getUTCDay();
 
-		if (!activity_name || activity_name == 'unknown') continue;
+		if (!activity_name || activity_name == 'unknown' || !distance) continue;
 
 		if (!activity_map.has(activity_name)) {
 			activity_map.set(activity_name, new Activity(activity_name, 1, distance, day))
